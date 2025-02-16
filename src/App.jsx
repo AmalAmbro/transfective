@@ -7,18 +7,21 @@ import WhyChooseSection from './components/whychoose/WhyChooseSection';
 import Footer from './components/Footer';
 import TranslationSection from './components/TranslationSection';
 import FaqSection from './components/FaqSection';
+import ErrorBoundary from './components/error/errorBoundary';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Spotlight />
-      <InnovativeSection />
-      <TranslationSection />
-      <FaqSection />
-      <WhyChooseSection />
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="App">
+        <Header />
+        <Spotlight />
+        <InnovativeSection />
+        <TranslationSection />
+        <FaqSection />
+        <WhyChooseSection />
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
 
